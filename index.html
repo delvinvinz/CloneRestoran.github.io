@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn | Tailwind</title>
+    <link rel="icon" href="img/kue.jpg">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/ad3db0e53c.js" crossorigin="anonymous"></script>
+    <script>
+      tailwind.config  = {
+        content: ['./HTML/**/*.{html,js}'],
+        theme: {
+          extend: {},
+        },
+        variants:{
+          extend:{
+            display:['group-focus'],
+          opacity :['group-focus'],
+        inset   :['group-focus'],
+          },
+        },
+        plugins: [],
+      }
+    </script>
+</head>
+<body class="bg-gray-200">
+    <nav class="fixed top-0 left-0 bg-gray-200 w-full shadow">
+        <div class="container m-auto flex justify-between items-center text-gray-600">
+            <h1 class="pl-8 py-4 "><img src="img/fast-food.png" alt=""></h1>
+            <ul class="hidden md:flex items-center pr-10 text-base font-semibold cursor-pointer">
+                <a  href="#home" class="hover:bg-gray-300 py-4 px-6"><li>Home</li></a>
+                <a href="#menu" class="hover:bg-gray-300 py-4 px-6"><li>Menu</li></a>
+                <a href="#kontak" class="hover:bg-gray-300 py-4 px-6"><li>Contact</li></a>
+            </ul>
+            <button class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-300 group">
+                <div class="w-5 h-1 bg-gray-600 mb-1"></div>
+                <div class="w-5 h-1 bg-gray-600 mb-1"></div>
+                <div class="w-5 h-1 bg-gray-600 "></div>
+
+                <div class="absolute top-0 -right-full h-screen w-8/12 bg-white border opacity-0
+                group-focus:right-0 group-focus:opacity-100 transition-all duration-300">
+                    <ul class="flex flex-col items-center w-full text-base cursor-pointer pt-10">
+                        <a href="#home" class="hover:bg-gray-300 py-4 px-6 w-full"><li>Home</li></a>
+                        <a href="#menu" class="hover:bg-gray-300 py-4 px-6 w-full"><li>Menu</li></a>
+                        <a href="#kontak" class="hover:bg-gray-300 py-4 px-6 w-full"><li>Contact</li></a>
+                    </ul>
+                </div>
+            </button>
+        </div>
+    </nav>
+    
+ <!-- Hero Section -->
+ <section class="bg-cover bg-center h-96 flex items-center text-white" style="background-image: url('img/restoran.jpg')" id="home">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold mb-2">Selamat Datang di Restoran Skuy</h1>
+      <p class="text-lg">Nikmati hidangan lezat kami dengan bahan-bahan berkualitas.</p>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="container mx-auto mt-8" id="menu">
+    <h2 class="text-2xl font-bold mb-4 text-center ">Menu Kami</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Item Menu 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <img src="img/Pizaa.jpg" alt="Menu 1" class="mb-4 rounded-md ">
+        <h3 class="text-xl font-bold mb-2">Pizza</h3>
+        <p class="text-gray-700">Pizza dengan campuran yang lezat.</p>
+        <span class="text-gray-500">Rp 50.000</span>
+      </div>
+
+      <!-- Item Menu 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <img src="img/fast-food.jpg" alt="Menu 2" class="mb-4 rounded-md ">
+        <h3 class="text-xl font-bold mb-2">Salad</h3>
+        <p class="text-gray-700">Salad dengan kuah gurih dan daging yang empuk.</p>
+        <span class="text-gray-500">Rp 75.000</span>
+      </div>
+
+      <!-- Item Menu 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <img src="img/kue.jpg" alt="Menu 3" class="mb-4 rounded-md ">
+        <h3 class="text-xl font-bold mb-2">pancake</h3>
+        <p class="text-gray-700">pancake dengan rasa yang lembut dan creamy.</p>
+        <span class="text-gray-500">Rp 25.000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang Kami Section -->
+  <section class="bg-gray-200 py-12" id="kontak">
+    <div class="container mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-4">Tentang Kami</h2>
+      <p class="text-gray-700">Restoran Skuy telah melayani pelanggan dengan menu berkualitas tinggi dan pelayanan terbaik sejak tahun 2024.</p>
+    </div>
+  </section>
+
+
+  <!-- Kontak Section -->
+  <section class="container mx-auto mt-8">
+    <h2 class="text-2xl font-bold mb-4 text-center">Hubungi Kami</h2>
+    <p class="text-gray-700 text-center">Jika Anda memiliki pertanyaan atau ingin membuat reservasi, hubungi kami melalui informasi di bawah ini:</p>
+    <div class="flex items-center justify-center mt-4">
+      <div class="bg-white p-6 rounded-lg shadow-md w-2/1  ">
+        <p class="text-gray-700"><strong>Alamat:</strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, quod!</p>
+        <p class="text-gray-700"><strong>Telepon:</strong> (021) 123-4567</p>
+        <p class="text-gray-700 "><strong>Email:</strong>skuy@restoranskuy.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-4 mt-8" >
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Restoran Skuy. All rights reserved.</p>
+    </div>
+    <div class="ml-[1250px] absolute -bottom-[835px] bg-black p-2 rounded-lg">
+     <a href="#home"> <i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </footer>
+    
+</body>
+</html>
